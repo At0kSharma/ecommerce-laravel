@@ -4,13 +4,13 @@
 <div class="container">
     {{-- orders  --}}
     <div class="row ">
-        <div class="col-sm border rounded bg-white">
+        <div class="col-sm border bg-white">
             @if ($message = Session::get('success'))
-            <div class="alert alert-success p-2 m-2 border rounded text-center">
+            <div class="alert alert-success p-2 m-2 border text-center">
                 <p>{{$message}}</p>
             </div>
             @endif
-            <div class="p-2 m-2 border rounded shadow bg-primary text-white">
+            <div class="p-2 m-2 border shadow bg-primary text-white">
                 <span class="h5">{{strtoupper($status)}} ORDERS</span>
             </div>
           @if ($orders->count() > 0)
@@ -19,11 +19,11 @@
                 $order_details = (json_decode($order->order,true));
                 $n=1;
                 @endphp
-                    <div class="p-2 m-2 border border-primary rounded shadow bg-white">
+                    <div class="p-2 m-2 border border-primary shadow bg-white">
                         <div class="p-2 d-flex justify-content-between">
-                            <span class="rounded text-white bg-primary p-2 ">Order Id : {{$order->id}}</span>
+                            <span class= text-white bg-primary p-2 ">Order Id : {{$order->id}}</span>
                             <form action="{{route('orders.store',$order->id)}}" method="post" class="d-flex">
-                                <select name="status" id="status" class="border border-primary rounded mr-2">
+                                <select name="status" id="status" class="border border-primary mr-2">
                                     <option value="">Status</option>
                                     <option value="0">Pending</option>
                                     <option value="1">Shipping</option>
@@ -56,7 +56,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="p-2 m-2 d-flex border rounded bg-light">
+                        <div class="p-2 m-2 d-flex border bg-light">
                             <div class="d-flex flex-column p-2 m-2">
                                 <h5>Personal Details</h5>
                                 <span>{{$order->address->name}}</span>

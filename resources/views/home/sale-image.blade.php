@@ -1,14 +1,14 @@
-<div class="container sale-image-container">
+<div class="sale-image-container">
     @if ($categoryimages->count())
-    @foreach ($categoryimages as $categoryimage)
-    @if ($categoryimage->category == 'SALE')
-        <img class="sale-image br-20" src="data:image/jpeg;base64,{{base64_encode($categoryimage->image)}}" alt="">
+        @foreach ($categoryimages as $categoryimage)
+            @if ($categoryimage->category == 'SALE')
+                <img class="sale-image " src="data:image/jpeg;base64,{{base64_encode($categoryimage->image)}}" alt="">
+            @endif
+        @endforeach
     @endif
-    @endforeach
-    @endif
-    <a href="#" class="sale-link nav-link">
-        <span>SALE! SALE! SALE!</span>
-        <span>Winter Sale is on. Up to 30% off</span>
+    <span class="sale-text">Always Ready For Adventure</span>
+    <a href="#" class="sale-link">
+        <span>Winter Sale</span>
     </a>
     @auth
     @if (Auth::user()->is_admin)
@@ -29,7 +29,7 @@
                 </div>
                 <form action="{{ route('misc.store') }}" method="post" id="image_upload" enctype="multipart/form-data">
                     @csrf
-                    <label for="image" class="pl-2 ml-2">Add New Image<br>H:480px W:960px and size (<100KB)</label>
+                    <label for="image" class="pl-2 ml-2">Add New Image<br>H:480px W:1440px and size (<150KB)</label>
                     <input type="file" name="image" class="form-control-file m-2 p-2" id="image">
                     <input type="hidden" name="category" value="SALE">
                     @error('image')

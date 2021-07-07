@@ -22,7 +22,7 @@
         @endif
         <div class="row ">
             @if (Cart::count()>0)
-                <div class="col-sm-7 bg-white shadow rounded m-2 p-2">
+                <div class="col-sm-7 bg-white shadow m-2 p-2">
                     <h5 class="p-2 m-2">{{Cart::count()}} Items in Shopping cart</h5>
                     <hr>
                     @foreach (Cart::content() as $item)
@@ -66,7 +66,7 @@
                         @endforeach       
                     @endforeach 
                 </div>
-                <div class="col-sm-4 bg-white text-center shadow rounded m-2 p-2">
+                <div class="col-sm-4 bg-white text-center shadow m-2 p-2">
                     <h5 class="p-2 m-2">Summary</h5>
                     <hr>
                     <div class=" m-2 d-flex justify-content-between">

@@ -4,19 +4,19 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm border rounded bg-white">
+        <div class="col-sm border bg-white">
             @if ($message = Session::get('success'))
                 <div class="p-2 m-2 alert alert-success">
                     <p>{{$message}}</p>
                 </div>
             @endif
             @if ($addresses->count()>0)
-            <div class="p-2 m-2 border rounded shadow bg-secondary text-white">
+            <div class="p-2 m-2 border shadow bg-secondary text-white">
                 <span class="h5">ADDRESS</span>
             </div>
             <div class="d-flex flex-wrap">
                 @foreach ($addresses as $address)
-                <div class="p-2 m-2 border rounded shadow bg-white d-flex flex-column" style="width: 22em">
+                <div class="p-2 m-2 border shadow bg-white d-flex flex-column" style="width: 22em">
                     <span>{{$address->name}}</span>
                     <span>{{$address->email}}</span>
                     <span>{{$address->phone}}</span>
@@ -33,8 +33,8 @@
         </div>
     </div>
     <div class="row ">
-        <div class="col-sm border rounded bg-white">
-            <div class="p-2 m-2 border rounded shadow bg-secondary text-white">
+        <div class="col-sm border bg-white">
+            <div class="p-2 m-2 border shadow bg-secondary text-white">
                 <span class="h5">ORDERS</span>
             </div>
           @if ($orders->count() > 0)
@@ -43,10 +43,10 @@
                 $order_details = (json_decode($order->order,true));
                 $n=1;
                 @endphp
-                    <div class="p-2 m-2 border rounded shadow bg-white">
+                    <div class="p-2 m-2 border shadow bg-white">
                         <div class="p-2 m-2">
                             <span>order Id : {{$order->id}}</span>
-                            <span class=" rounded text-white p-1 m-1
+                            <span class=" text-white p-1 m-1
                                     @if($order->status == 0)
                                     bg-danger
                                     text-white

@@ -5,13 +5,13 @@
 <div class="container">
     <div class="row">
         @if ($addresses->count()>0)
-        <div class="col-sm-6 border rounded bg-white">
-            <div class="p-2 m-2 border rounded shadow bg-secondary text-white">
+        <div class="col-sm-6 border  bg-white">
+            <div class="p-2 m-2 border  shadow bg-secondary text-white">
                 <span class="h5">Select Address</span>
             </div>
             <div class="d-flex flex-wrap">
                 @foreach ($addresses as $address)
-                <div class="p-2 m-2 border rounded shadow bg-white d-flex flex-column" style="width: 16em">
+                <div class="p-2 m-2 border  shadow bg-white d-flex flex-column" style="width: 16em">
                     <span>{{$address->name}}</span>
                     <span>{{$address->email}}</span>
                     <span>{{$address->phone}}</span>
@@ -31,8 +31,8 @@
             
         </div>
         @endif
-        <div class="col-sm-6 border rounded bg-white">
-            <div class="p-2 m-2 border rounded shadow bg-secondary text-white">
+        <div class="col-sm-6 border  bg-white">
+            <div class="p-2 m-2 border  shadow bg-secondary text-white">
                 <span class="h5">New Address</span>
             </div>
             <form action="{{route('checkout.store')}}" method="post" id="payment-form">

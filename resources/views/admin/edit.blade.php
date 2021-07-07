@@ -11,7 +11,7 @@
                 <h3>Images </h3>
             </div>
             <div class="d-flex mt-2 p-3">
-                <img class="border rounded p-2" src="data:image/jpeg;base64,{{base64_encode($item->preview)}}" style="width:12em;" alt="image">
+                <img class="border  p-2" src="data:image/jpeg;base64,{{base64_encode($item->preview)}}" style="width:12em;" alt="image">
                 <form action="{{route('update.mainimage',$item->id)}}" method="post" enctype="multipart/form-data">
                     <div class=" pl-4  text-secondary form-group">
                         <label for="main_image">Change this image</label>
@@ -34,7 +34,7 @@
                 <div class="shadow-sm  p-2">
                     {{-- {{$image_file = Image::make($image->image)}} --}}
                     
-                    <img class="border rounded p-2" src="data:image/jpeg;base64,{{base64_encode($image->preview)}}" style="width:12em;" alt="image">
+                    <img class="border  p-2" src="data:image/jpeg;base64,{{base64_encode($image->preview)}}" style="width:12em;" alt="image">
                     
                     <form action="{{route('delete.image', $image->id)}}" method="post">
                         @csrf

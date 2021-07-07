@@ -39,7 +39,7 @@
         <div class="col-sm-10 d-flex">
             @if ($categoryimages->count())
             @foreach ($categoryimages as $categoryimage)
-            <div class="m-2 text-center rounded" style="height: 21em; width: 14em;">
+            <div class="m-2 text-center " style="height: 21em; width: 14em;">
                 <img class="w-100" src="data:image/jpeg;base64,{{base64_encode($categoryimage->image)}}" alt="">
                 <h6>{{$categoryimage->category}}</h6>
             </div>

@@ -37,8 +37,8 @@ class CategoryimageController extends Controller
             }); 
         }
         else{
-           // resize the image to a width of 300 and constrain aspect ratio (auto height)
-           $image = Image::make($request->image)->resize(960, null, function ($constraint) {
+           // resize the image to a width of 1440 and constrain aspect ratio (auto height)
+           $image = Image::make($request->image)->resize(1440, null, function ($constraint) {
             $constraint->aspectRatio();
         }); 
         }

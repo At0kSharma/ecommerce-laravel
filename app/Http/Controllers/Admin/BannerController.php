@@ -28,7 +28,8 @@ class BannerController extends Controller
         $this->validate($request,[
             'banner' => 'required|image|mimes:jpeg,png,jpg|max:2048|'
         ]);
-        $banner = Image::make($request->banner)->resize(712, null, function ($constraint) {
+        // resize the image to a height of 520 and constrain aspect ratio (auto height)
+        $banner = Image::make($request->banner)->resize(null, 520, function ($constraint) {
             $constraint->aspectRatio();
         });  
         Response::make($banner->encode('jpg',100)); 

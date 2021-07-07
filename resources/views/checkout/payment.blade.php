@@ -111,7 +111,7 @@
 
 <div class="container ">
     <div class="row ">
-        <div class="col-sm-7 bg-white rounded">
+        <div class="col-sm-7 bg-white ">
             <p class="h5 pt-2">Payment Details</p>
             <table class="table" >
                 <thead>
@@ -164,7 +164,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-sm-4 ml-2 bg-white rounded">
+        <div class="col-sm-4 ml-2 bg-white ">
             <div class="form-group pt-2">
                 <label class="h5" for="term_conditions">Terms of Service</label>
                 <textarea class="form-control" id="term_conditions" rows="3">Gurkhas trails was established with a vision of providing quality at the most affordable prices. At Gurkha Trails we are committed to be honest, Open and Fair deals with all our customers. At Gurkhas Trails we take full responsibility to protect personal information of our customers under applicable privacy laws in respect of the collection, use, disclosure and management of customers personal information. 

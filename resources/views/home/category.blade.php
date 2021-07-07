@@ -8,7 +8,7 @@
         @foreach ($categoryimages as $categoryimage)
         @if ($categoryimage->category == 'FIBER' | $categoryimage->category == 'DOWN' | $categoryimage->category == 'SILICON')
         <div class="category-image p-2 parent-pos">
-            <img class="w-100 br-10" src="data:image/jpeg;base64,{{base64_encode($categoryimage->image)}}" alt="">
+            <img class="w-100" src="data:image/jpeg;base64,{{base64_encode($categoryimage->image)}}" alt="">
             <a class="sale-btn nav-link text-light" href="{{route('shop.type',strtolower($categoryimage->category))}}">{{$categoryimage->category}}</a>
         </div>
         @endif

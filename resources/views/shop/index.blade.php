@@ -7,9 +7,9 @@
         <div class="col-sm d-flex flex-wrap justify-content-center">
             @foreach ($products as $product)
             <div class="card m-2 p-0 justify-content-between border-0 product-card text-center position-relative">
-                <p class="position-absolute rounded p-0 text-danger border border-danger">{{$product->discount}}% OFF</p>
+                <p class="position-absolute  p-0 text-danger border border-danger">{{$product->discount}}% OFF</p>
                 {{-- <p class="position-absolute p-1 text-primary" style="right:0;"><i class="fas fa-cart-plus fa-2x"></i></p> --}}
-                <a href="{{route('product',['id' => $product->id,'type' => $product->type,'body' => $product->body])}}"><img class="card-img-top rounded" src="data:image/jpeg;base64,{{base64_encode($product->preview)}}" alt="Card image cap"></a>
+                <a href="{{route('product',['id' => $product->id,'type' => $product->type,'body' => $product->body])}}"><img class="card-img-top " src="data:image/jpeg;base64,{{base64_encode($product->preview)}}" alt="Card image cap"></a>
                 <div class="card-body d-flex flex-column p-0 m-0">
                     <div class="mt-auto">
                         <h5 class="card-title pt-0">{{$product->name}}</h5>

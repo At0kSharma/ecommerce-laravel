@@ -25,11 +25,11 @@
                     @for ($i = 0; $i < $product->photo->count(); $i++)
                         @if ($i==0)
                         <div class="carousel-item active">
-                            <img src="data:image/jpeg;base64,{{base64_encode($product->photo[$i]->image)}}" class="img-fluid br-20"  alt="image">
+                            <img src="data:image/jpeg;base64,{{base64_encode($product->photo[$i]->image)}}" class="img-fluid"  alt="image">
                         </div>
                         @else
                         <div class="carousel-item">
-                            <img src="data:image/jpeg;base64,{{base64_encode($product->photo[$i]->image)}}" class="img-fluid br-20"  alt="image">
+                            <img src="data:image/jpeg;base64,{{base64_encode($product->photo[$i]->image)}}" class="img-fluid"  alt="image">
                         </div>
                         @endif
                     @endfor
@@ -116,7 +116,7 @@
                                 @endphp
                                 {{-- available --}}
                                 @if ($product->quantity->count()>0)
-                                <div class="shadow rounded text-center" style="height: 100px;"> 
+                                <div class="shadow text-center" style="height: 100px;"> 
                                     <h5>Avaliable</h5>
                                     <div class="d-flex p-2 m-2">
                                         @foreach ($product->quantity as $quantity)
@@ -319,14 +319,14 @@
                         <tbody>
                             @foreach ($ratings as $rating)
                                     <tr>
-                                        <div class="m-2 bg-white p-2 border rounded">
+                                        <div class="m-2 bg-white p-2 border">
                                             <div class="d-flex">
                                                 <p class="h5 text-primary">{{$rating->user->name}}</p>
                                                 <span class="pl-2 text-secondary">{{$rating->created_at->diffForHumans()}}</span>
                                             </div>
                                             
                                             <p class="pl-4 h5">{{$rating->rating}} Star Ratings</p>
-                                            <p class="pl-4 bg-light rounded" >{{$rating->review}}</p>
+                                            <p class="pl-4 bg-light" >{{$rating->review}}</p>
                                         </div>    
                                     </tr>
                             @endforeach
@@ -353,9 +353,9 @@
     <div class="col-sm-12 d-flex flex-wrap justify-content-center ">
         @foreach ($type as $product)
         <div class="card m-2 p-0 justify-content-between border-0 product-card text-center position-relative">
-            <p class="position-absolute rounded p-0 text-danger border border-danger">{{$product->discount}}% OFF</p>
+            <p class="position-absolute p-0 text-danger border border-danger">{{$product->discount}}% OFF</p>
             {{-- <p class="position-absolute p-1 text-primary" style="right:0;"><i class="fas fa-cart-plus fa-2x"></i></p> --}}
-            <a href="{{route('product',['id' => $product->id,'type' => $product->type,'body' => $product->body])}}"><img class="card-img-top rounded" src="data:image/jpeg;base64,{{base64_encode($product->preview)}}" alt="Card image cap"></a>
+            <a href="{{route('product',['id' => $product->id,'type' => $product->type,'body' => $product->body])}}"><img class="card-img-top" src="data:image/jpeg;base64,{{base64_encode($product->preview)}}" alt="Card image cap"></a>
             <div class="card-body d-flex flex-column p-0 m-0">
                 <div class="mt-auto">
                     <h5 class="card-title pt-0">{{$product->name}}</h5>
