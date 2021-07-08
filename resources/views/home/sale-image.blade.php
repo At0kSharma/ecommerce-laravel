@@ -7,7 +7,7 @@
         @endforeach
     @endif
     <span class="sale-text">Always Ready For Adventure</span>
-    <a href="#" class="sale-link">
+    <a href="{{route('shop.index')}}" class="sale-link">
         <span>Winter Sale</span>
     </a>
     @auth

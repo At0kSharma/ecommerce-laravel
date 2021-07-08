@@ -24,7 +24,7 @@
                     <span>UP TO</span><br>
                     <span>30% OFF</span><br>
                     <span>DOWN JACKETS</span><br>
-                    <a href="#" class="section-link">
+                    <a href="{{route('shop.subgroup',['type' => 'down','body' => 'women'])}}" class="section-link">
                         <span>SHOP NOW</span>
                     </a>
                 </div>
@@ -35,7 +35,7 @@
                     <span>UP TO</span><br>
                     <span>30% OFF</span><br>
                     <span>DOWN JACKETS</span><br>
-                    <a href="#" class="section-link">
+                    <a href="{{route('shop.subgroup',['type' => 'down','body' => 'men'])}}" class="section-link">
                         <span>SHOP NOW</span>
                     </a>
                 </div>

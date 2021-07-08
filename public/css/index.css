@@ -2,6 +2,7 @@
 *{
   font-family: 'Roboto', sans-serif;
 }
+
 .color-second {
   color: #ff6a3d;
 }
@@ -197,13 +198,14 @@
 }
 /* end sale-image-container */
 
+
 /* men-women-section */
 
 .men-section,.women-section{
   font-size: 16px;
   position:relative;
   width: auto;
-  height: 250px;
+  height: 253px;
 }
 
 .men-section > img,
@@ -273,4 +275,12 @@ li{
   .sale-image-container{
     font-size: .5em;
   }
+}
+
+
+
+/* bootstrap overwrite */
+.dropdown-menu > a:hover {
+  background-image: none;
+  background-color: #fd3b00;
 }
