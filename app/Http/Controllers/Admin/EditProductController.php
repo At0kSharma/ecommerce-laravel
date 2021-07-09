@@ -156,7 +156,7 @@ class EditProductController extends Controller
 
         $this->validate($request, [
             'size'=> 'required',
-            'quantity'=> 'required',
+            'quantity'=> 'required|not_in:0',
         ]);
         
         Quantity::updateOrCreate(

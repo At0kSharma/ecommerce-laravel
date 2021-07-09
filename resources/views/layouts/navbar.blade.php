@@ -5,7 +5,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
         <a class="navbar-brand d-flex" href="{{route('home.index')}}">
             <img src="{{asset('img/gt_logo.svg')}}" width="50" height="50" class="d-inline-block align-top" alt="">
-            <span class="h4 mt-3 text-monospace">GurkhaTralis</span>
+            <span class="h4 mt-3">GurkhaTralis</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu" aria-controls="navbarmenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -12,53 +12,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark color-second-bg shadow-sm">
-        <div class="container d-flex justify-content-between">
-                <!-- Left Side Of Navbar -->
-                <ul class="d-flex m-0 p-0 align-items-center">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        GurkhaTrails
-                    </a>
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="d-flex m-0 p-0 list-unstyled align-items-center">
-                    <!-- Authentication Links -->
-                    @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                        @endif
-
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-light">
-                                {{ Auth::user()->name }}
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-light" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </li>
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
+    @include('layouts.navbar')
     <div class="navbar navbar-expand-lg bg-light">
         <button type="button" id="sidebarCollapse" class="btn btn1 btn-outline-primary">
             <i class="fas fa-align-left"></i>

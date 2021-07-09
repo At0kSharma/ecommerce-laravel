@@ -1,79 +1,79 @@
-$(document).ready(function(){
-    $("#banner-area .owl-carousel").owlCarousel({
-        loop:true,
-        dots:true,
-        items:1,
-        lazyLoad : true,
-        autoplay:true,
-        fluidSpeed:true,
-        autoplayTimeout:6000,
-        autoplayHoverPause:true
-    });
+// $(document).ready(function(){
+//     $("#banner-area .owl-carousel").owlCarousel({
+//         loop:true,
+//         dots:true,
+//         items:1,
+//         lazyLoad : true,
+//         autoplay:true,
+//         fluidSpeed:true,
+//         autoplayTimeout:6000,
+//         autoplayHoverPause:true
+//     });
 
 
-    //top sale carousel
-    $("#new-arival .owl-carousel").owlCarousel({
-        loop:true,
-        nav:false,
-        dots:false,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true,
-        responsive:{
-            0:{
-                items:2
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:4
-            }
-        }
-    });
+//     //top sale carousel
+//     $("#new-arival .owl-carousel").owlCarousel({
+//         loop:true,
+//         nav:false,
+//         dots:false,
+//         autoplay:true,
+//         autoplayTimeout:5000,
+//         autoplayHoverPause:true,
+//         responsive:{
+//             0:{
+//                 items:2
+//             },
+//             600:{
+//                 items:3
+//             },
+//             1000:{
+//                 items:4
+//             }
+//         }
+//     });
 
-    //isotope
-    var $grid = $(".grid").isotope({
-        itemSelector:'.grid-item',
-        layoutMode:'fitRows'
-    });
+//     //isotope
+//     var $grid = $(".grid").isotope({
+//         itemSelector:'.grid-item',
+//         layoutMode:'fitRows'
+//     });
 
-    //filter items on button
-    $(".button-group").on("click","button",function(){
-        var filterValue=$(this).attr('data-filter');
-        $grid.isotope({filter:filterValue});
-    });
+//     //filter items on button
+//     $(".button-group").on("click","button",function(){
+//         var filterValue=$(this).attr('data-filter');
+//         $grid.isotope({filter:filterValue});
+//     });
 
-    //new arrival carousel
-    $("#type .owl-carousel").owlCarousel({
-        loop:true,
-        nav:false,
-        dots:false,
-        autoplay:true,
-        autoplayTimeout:5000,
-        autoplayHoverPause:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:4
-            }
-        }
-    });
+//     //new arrival carousel
+//     $("#type .owl-carousel").owlCarousel({
+//         loop:true,
+//         nav:false,
+//         dots:false,
+//         autoplay:true,
+//         autoplayTimeout:5000,
+//         autoplayHoverPause:true,
+//         responsive:{
+//             0:{
+//                 items:1
+//             },
+//             600:{
+//                 items:3
+//             },
+//             1000:{
+//                 items:4
+//             }
+//         }
+//     });
 
-    //product-image
-    $("#product-image .owl-carousel").owlCarousel({
-        loop:true,
-        dots:true,
-        items:1,
-        nav:true,
-        navText : ['<i class=" text-info fa fa-angle-left" aria-hidden="true"></i>','<i class=" text-info fa fa-angle-right" aria-hidden="true"></i>'],
-    });
-});
+//     //product-image
+//     $("#product-image .owl-carousel").owlCarousel({
+//         loop:true,
+//         dots:true,
+//         items:1,
+//         nav:true,
+//         navText : ['<i class=" text-info fa fa-angle-left" aria-hidden="true"></i>','<i class=" text-info fa fa-angle-right" aria-hidden="true"></i>'],
+//     });
+// });
 
 $(document).ready(function(){
     $('#imgsubmit').click(function(){
@@ -175,11 +175,6 @@ $(document).ready(function() {
 //   });    
 // });
 
-
- // datatables
- $(document).ready( function () {
-  $('.datatable').DataTable();
-});
 
 $(document).ready(function()
 {

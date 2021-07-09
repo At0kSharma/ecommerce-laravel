@@ -9,5 +9,4 @@
         <p class="border-danger border-bottom font-weight-bold">Free Shipping</p>
         <p>Within Australia, shipping are free on all product</p>
     </div>
-   
 </div>

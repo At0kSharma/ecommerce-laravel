@@ -8,7 +8,7 @@
             <div class="d-flex flex-column flex-wrap">
                 <a href="#" class="color-second p-1">Contact Us</a>
                 <a href="#" class="color-second p-1">Size Guide</a>
-                <a href="#" class="color-second p-1">Shipptin Info</a>
+                <a href="#" class="color-second p-1">Shipping Info</a>
                 <a href="#" class="color-second p-1">Return Policy</a>
                 <a href="#" class="color-second p-1">Warranty</a>
                 <a href="#" class="color-second p-1">Terms & Conditions</a>

@@ -36,39 +36,7 @@
                                     <form action="{{ route('edit.product', $item->id) }}" method="post">
                                         @csrf
                                         <button type="submit" class="btn p-1 m-1 btn-outline-primary"><i class="fas fa-pen"></i></button>
-                                    </form>
-                                   
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-product">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                    
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="delete-product" tabindex="-1" role="dialog" aria-labelledby="delete-productTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLongTitle">Delete Product</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <span>Are you sure </span><br>
-                                                    <span>{{$item->id}}</span>
-                                                    <span>Changes can't be revert</span>
-                                                </div>
-                                                <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <form action="{{ route('delete.product', $item->id) }}" method="post">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <input type="submit" name="delete-image-submit" class="btn p-1 m-1 btn-outline-danger" value="Delete">
-                                                </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </form>                                  
                                 </div>
                                 </td>
                             </tr>
