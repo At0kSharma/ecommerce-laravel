@@ -70,6 +70,7 @@
                                 Complete
                                 @endif
                             </span>
+                            <span class=" border p-1 m-1">Invoice: <a href="{{route('mail.invoice',$order->id)}}"><i class=" text-secondary fas fa-file-invoice"></i></a> </span>
                         </div>
                         
                         <table class="table">

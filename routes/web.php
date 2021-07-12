@@ -16,6 +16,8 @@ use App\Http\Controllers\Product\ProductController;
 use App\Http\Controllers\Shop\CartController;
 use App\Http\Controllers\Shop\CheckoutController;
 use App\Http\Controllers\Shop\ShopController;
+use App\Http\Controllers\Mail\MailController;
+use App\Mail\InvoiceMail;
 
 
 Auth::routes();
@@ -121,3 +123,5 @@ Route::post('/email/verification-notification', function (Request $request) {
 
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+Route::get('/profile/{order}/invoice',[MailController::class,'invoice'])->name('mail.invoice');

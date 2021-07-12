@@ -13,25 +13,16 @@
 
 /* new blade */
 .product-card{
+  height: 33rem;
+  width: 16rem; 
   position: relative;
   font-size: 16px;
-  height: 33rem;
-  width: 16rem;
-  -webkit-background:none;
-  -moz-background:none;
-  -o-background:none;
-  background:none;
+  overflow: hidden;
   
 }
 .product-card > img{
   opacity: 1;
   display: block;
-  -webkit-transition: .25s ease-out;
-  -o-transition: .25s ease-out;
-  -moz-transition: .25s ease-out;
-  transition: .25s ease-out;
-  backface-visibility: hidden;
-  
 }
 .discount{
   display: block;
@@ -49,7 +40,8 @@
 }
 .product-card:hover > img{
   opacity: 0.3;
-  transform: scale(1.03);
+  transform: scale(1.1);
+  transition: transform 3s cubic-bezier(0.25,0.45,0.45,0.95);
 }
 .product-card:hover .discount{
   display: none;

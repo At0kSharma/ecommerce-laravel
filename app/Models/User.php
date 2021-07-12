@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Rating;
 use App\Models\Orderbook;
+use App\Models\Address;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -49,6 +50,9 @@ class User extends Authenticatable implements MustVerifyEmail
     }
     public function orderbook(){
         return $this->hasMany(Orderbook::class);
+    }
+    public function address(){
+        return $this->hasMany(Address::class);
     }
 
 }
